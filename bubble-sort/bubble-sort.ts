@@ -7,16 +7,20 @@ const swap = (indexA: number, indexB: number, arr: number[]): number[] => {
   return tmpArr;
 };
 
-const shouldSwap = (a: number, b: number, direction: "ASC" | "DESC") =>
+type DirectionType = "ASC" | "DESC";
+const shouldSwap = (a: number, b: number, direction: DirectionType) =>
   direction === "ASC" ? a > b : a < b;
 
-const bubbleSort: (numArr: number[]) => any = (numArr) => {
+const bubbleSort: (numArr: number[], direction?: DirectionType) => any = (
+  numArr,
+  direction = "ASC"
+) => {
   let cpyArr = [...numArr];
   const arrLength = cpyArr.length;
 
   cpyArr.forEach((_, index) => {
     for (let y = 0; y < arrLength - index - 1; y++)
-      if (shouldSwap(cpyArr[y], cpyArr[y + 1], "ASC"))
+      if (shouldSwap(cpyArr[y], cpyArr[y + 1], direction))
         cpyArr = swap(y, y + 1, cpyArr);
   });
 
