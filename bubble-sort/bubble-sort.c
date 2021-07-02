@@ -23,15 +23,19 @@ int main() {
 }
 
 void bubbleSort(int arr[], size_t arrLength, char *direction) {
-  for (int x = 0; x < arrLength; x++) {
-    for (int y = 0; y < (arrLength - 1 - x); y++) {
+  bool isSorted = false;
+
+  do {
+    isSorted = true;
+    for (int y = 0; y < (arrLength - 1); y++) {
       int currentVal = arr[y];
       int nextVal = arr[y + 1];
       if (shouldSwap(arr[y], arr[y + 1], direction)) {
         swap(&arr[y], &arr[y + 1]);
+        isSorted = false;
       }
     }
-  }
+  } while (!isSorted);
 }
 
 bool shouldSwap(int a, int b, char *direction) {
