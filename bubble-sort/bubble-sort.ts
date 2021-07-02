@@ -11,7 +11,7 @@ type DirectionType = "ASC" | "DESC";
 const shouldSwap = (a: number, b: number, direction: DirectionType) =>
   direction === "ASC" ? a > b : a < b;
 
-const bubbleSort: (numArr: number[], direction?: DirectionType) => any = (
+const bubbleSort: (numArr: number[], direction?: DirectionType) => number[] = (
   numArr,
   direction = "ASC"
 ) => {
