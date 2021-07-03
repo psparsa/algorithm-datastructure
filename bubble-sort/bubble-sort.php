@@ -1,6 +1,6 @@
 <?php
 
-function getRandomArray($len)
+function getTestArray($len)
 {
     $tmpArr = range(0, $len - 1);
     shuffle($tmpArr);
@@ -37,10 +37,10 @@ function bubbleSort($arr, $dir)
     return $cpyArr;
 }
 
-$testArray = getRandomArray(20);
+$testArray = getTestArray(20);
 
 echo "Input:\n";
-print_r($testArray = getRandomArray(20));
+print_r($testArray = getTestArray(20));
 
 echo "\n";
 
