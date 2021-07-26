@@ -40,7 +40,7 @@ function bubbleSort($arr, $dir)
 $testArray = getTestArray(20);
 
 echo "Input:\n";
-print_r($testArray = getTestArray(20));
+print_r($testArray);
 
 echo "\n";
 
