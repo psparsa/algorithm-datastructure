@@ -25,7 +25,7 @@ int main() {
 void bubbleSort(int arr[], size_t arrLength, char *direction) {
   bool isSorted = false;
 
-  do {
+  while (!isSorted) {
     isSorted = true;
     for (int y = 0; y < (arrLength - 1); y++) {
       int currentVal = arr[y];
@@ -35,7 +35,7 @@ void bubbleSort(int arr[], size_t arrLength, char *direction) {
         isSorted = false;
       }
     }
-  } while (!isSorted);
+  };
 }
 
 bool shouldSwap(int a, int b, char *direction) {
