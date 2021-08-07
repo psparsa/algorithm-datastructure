@@ -5,10 +5,10 @@
 
 static int datasetArr[] = {25, 45, 1,  33, 68, 13, 57, 15,
                            85, 15, 83, 10, 6,  8,  2};
-static void bubbleSort(int arr[], size_t arrLength, char *direction);
-static bool shouldSwap(int a, int b, char *direction);
-static void swap(int *a, int *b);
-static void printArr(int arr[], size_t arrLength);
+void bubbleSort(int arr[], size_t arrLength, char *direction);
+bool shouldSwap(int a, int b, char *direction);
+void swap(int *a, int *b);
+void printArr(int arr[], size_t arrLength);
 
 int main() {
   const size_t arrSize = sizeof(datasetArr) / sizeof(datasetArr)[0];
