@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int factorial(int num);
+unsigned long long factorial(int num);
 
 int main() {
-  int answer = factorial(10);
-  printf("%i\n", answer);
+  unsigned long long answer = factorial(10);
+  printf("%llu\n", answer);
   return 0;
 }
 
-int factorial(int num) {
-  int tmp = 1;
-  for (size_t l = 1; l <= num; l++)
+unsigned long long factorial(int num) {
+  unsigned long long tmp = 1;
+  for (int l = 1; l <= num; l++)
     tmp = tmp * l;
   return tmp;
 }
