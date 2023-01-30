@@ -3,8 +3,8 @@ type DivideArray = ({ arr, pivot }: { arr: number[]; pivot: number }) => {
   higherValues: number[];
 };
 const divideArray: DivideArray = ({ arr, pivot }) => {
-  const lowerValues = [];
-  const higherValues = [];
+  const lowerValues: number[] = [];
+  const higherValues: number[] = [];
 
   arr.forEach((val) => {
     if (val <= pivot) lowerValues.push(val);
